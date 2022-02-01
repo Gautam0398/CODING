@@ -34,6 +34,7 @@ public class AP {
             for(int i=0 ; i<n ; i++){
                 a[i]=input.nextInt();
             }
+            System.out.println("SUCESSSSSS")
             int[] temp=new int[n];
             
             int k=0;
