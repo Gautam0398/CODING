@@ -1,0 +1,29 @@
+import java.util.*;
+  import java.io.*;
+  
+  public class Main {
+    public static void main(String args[]) throws IOException {
+      
+         Scanner input = new Scanner(System.in);
+         int t = input.nextInt();
+         while(t>0){
+         int n=input.nextInt();
+         int sum1=0,sum2=0,result=0;
+         int[] a = new int[n];
+         
+         for(int i=0;i<n-1;i++){
+           a[i] = input.nextInt();
+           sum1+=a[i];
+         }
+         for(int i=1;i<=n;i++){
+           sum2+=i;
+         }
+  
+          result = sum2-sum1;
+         System.out.println(result);
+         t--;
+         }
+         
+      
+    }
+  }
