@@ -11,10 +11,13 @@ public class fibo {
         return getNthFibo(n-1)+getNthFibo(n-2);
     }
 
+    
+
     public static void main(String args[]){
         Scanner input = new Scanner(System.in);
         int n = input.nextInt();
         int fiboResult  = getNthFibo(n);
         System.out.println("n th fibo number "+fiboResult);
+        input.close();
     }
 }

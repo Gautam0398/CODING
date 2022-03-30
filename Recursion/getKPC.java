@@ -13,25 +13,26 @@ public class getKPC {
     static String[] codes = { ".;", "abc", "def", "ghi", "jkl", "mno", "pqr", "stu", "vwx", "yz" };
 
     public static ArrayList<String> getKP(String s) {
-        if (s.length() == 0) {
-            ArrayList<String> brs = new ArrayList<>();
-            brs.add("");
-            return brs;
+
+        if(s.length()==0){
+            ArrayList<String> bres = new ArrayList<>();
+            bres.add("");
+            return bres;
         }
+
         char ch = s.charAt(0);
-        String ros = s.substring(1);
+        ArrayList<String> rres= getKP(s.substring(1,s.length()));
 
-        ArrayList<String> rres = getKP(ros);
-        ArrayList<String> mres = new ArrayList<>();
-
-        String codeforch = codes[ch - '0'];
-
-        for (int i = 0; i < codeforch.length(); i++) {
-            char chcode = codeforch.charAt(i);
-            for (String rstr : rres) {
-                mres.add(chcode + rstr);
+        ArrayList<String> mres= new ArrayList<>();
+        String numVal = codes[ch-'0'];
+        
+            for(int i=0 ;i< numVal.length();i++){
+              for(String val: rres){
+                mres.add(numVal.charAt(i)+val);
+               }
             }
-        }
+
         return mres;
+        
     }
 }
